@@ -1,13 +1,17 @@
 {
+  "printWidth": 100,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "experimentalTernaries": true,
+  "useTabs": true,
   "plugins": ["prettier-plugin-astro"],
   "overrides": [
     {
-      "files": "*.astro",
+      "files": [".*", "*.json", "*.md", "*.mdx", "*.toml", "*.yml"],
       "options": {
-        "parser": "astro"
+        "useTabs": false
       }
     }
-  ],
-  "semi": false,
-  "singleQuote": true
+  ]
 }
