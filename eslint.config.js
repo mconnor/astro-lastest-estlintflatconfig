@@ -3,10 +3,11 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 
 import js from '@eslint/js';
 import markdown from 'eslint-plugin-markdown';
+
 export default [
 	// add more generic rule sets here, such as:
 	// js.configs.recommended,
-
+	js.configs.recommended,
 	...eslintPluginAstro.configs['flat/recommended'],
 	eslintConfigPrettier,
 	{
@@ -14,16 +15,7 @@ export default [
 			markdown,
 		},
 	},
-	{
-		rules: {
-			// override/add rules settings here, such as:
-			// "astro/no-set-html-directive": "error"
-		},
-	},
-	{
-		...js.configs.recommended,
-		files: ['src/**/*.js', 'src/**/*.jsx'],
-	},
+
 	{
 		files: ['src/**/*.md'],
 		processor: 'markdown/markdown',
