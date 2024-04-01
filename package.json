@@ -2,6 +2,7 @@
   "name": "irregular-ice",
   "type": "module",
   "version": "0.0.1",
+  "author": "Mike Connor",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -15,17 +16,18 @@
     "formatJason": "eslint --format json"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.10",
     "astro": "^4.5.12"
   },
   "packageManager": "pnpm@8.15.5+sha256.4b4efa12490e5055d59b9b9fc9438b7d581a6b7af3b5675eb5c5f447cee1a589",
   "devDependencies": {
+    "@astrojs/check": "^0.5.10",
     "@astrojs/mdx": "^2.2.2",
     "@typescript-eslint/parser": "^7.4.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-astro": "^0.33.1",
     "eslint-plugin-markdown": "^4.0.1",
+    "globals": "^15.0.0",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
     "typescript": "^5.4.3",

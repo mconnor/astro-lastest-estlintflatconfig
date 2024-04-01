@@ -1,6 +1,6 @@
 import eslintPluginAstro from 'eslint-plugin-astro';
 import eslintConfigPrettier from 'eslint-config-prettier';
-
+import globals from "globals";
 import js from '@eslint/js';
 import markdown from 'eslint-plugin-markdown';
 
@@ -9,6 +9,16 @@ export default [
   // js.configs.recommended,
   js.configs.recommended,
   ...eslintPluginAstro.configs['flat/recommended'],
+  {
+    languageOptions: {
+            ecmaVersion: 2022,
+            sourceType: "module",
+            globals: {
+                ...globals.browser,
+                // myCustomGlobal: "readonly"
+            }
+        }
+  },
   {
     rules: {
       // override/add rules settings here, such as:
@@ -34,8 +44,8 @@ export default [
     files: ['**/*.md/*.js'],
     rules: {
       // 2. Disable other rules.
-      'no-console': 'off',
-      'import/no-unresolved': 'off',
+      // 'no-console': 'off',
+      // 'import/no-unresolved': 'off',
     },
   },
 ];
