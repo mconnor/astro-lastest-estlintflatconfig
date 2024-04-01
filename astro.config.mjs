@@ -6,25 +6,25 @@ import mdx from '@astrojs/mdx';
 
 // // https://astro.build/config
 export default defineConfig({
-	// your configuration options here...
-	// https://docs.astro.build/en/reference/configuration-reference/
-	output: 'static',
-	site: 'http://localhost:4321',
-	image: {
-		domains: ['astro.build', 'picsum.photos'],
-	},
-	markdown: {
-		drafts: true,
-	},
-	integrations: [
-		mdx({
-			drafts: true,
-		}),
-	],
-	vite: {
-		ssr: {
-			noExternal: ['date-fns', 'open-props'],
-		},
-	},
-	cacheDir: './my-custom-cache-directory',
+  // your configuration options here...
+  // https://docs.astro.build/en/reference/configuration-reference/
+  output: 'static',
+  site: 'http://localhost:4321',
+  image: {
+    domains: ['astro.build', 'picsum.photos'],
+  },
+  markdown: {
+    drafts: true,
+  },
+  integrations: [
+    mdx({
+      drafts: true,
+    }),
+  ],
+  vite: {
+    ssr: {
+      noExternal: ['date-fns', 'open-props'],
+    },
+  },
+  cacheDir: './my-custom-cache-directory',
 });
